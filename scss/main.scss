@@ -1,0 +1,162 @@
+@import "config";
+@import "utilities";
+
+// General Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background: whitesmoke;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+#logo {
+  width: 50px;
+  padding-bottom: 1.5rem;
+}
+
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Condensed', sans-serif;
+// font-family: 'Roboto Slab', serif;
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2.5rem;
+  background: whitesmoke;
+  z-index: 1;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 2px transparent solid;
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $main-color;
+      color: $main-color;
+    }
+  }
+}
+
+// Post
+.post {
+  &-header {
+    line-height: 1.8;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-lead {
+    line-height: 1.8;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &-snippet {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: $snippet-color;
+    margin-bottom: 1rem;
+  }
+
+  &-timestamp {
+    display: flex;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $main-color;
+  }
+
+  &-icon {
+    margin-right: 0.5rem;
+    color: $main-color;
+  }
+}
+
+// Footer
+
+.copyright {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#main-footer {
+  // max-width: $website-width;
+  width: 100%;
+  padding: 0 2.5rem;
+  margin: auto;
+  background: $footer-color;
+  color: #fff;
+  height: 6rem;
+  margin-top: 3rem;
+
+  a {
+    color: #fff;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1.5rem;
+      height: $social-icon-h-desktop;
+      width: $social-icon-h-desktop;
+      line-height: $social-icon-h-desktop;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+// Import Media Queries
+@import "media";
