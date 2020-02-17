@@ -118,7 +118,7 @@ h2 {
   #main-footer .footer-content {
     display: flex;
     justify-content: space-between;
-    height: 7rem;
+    height: 6rem;
     align-items: center; }
     #main-footer .footer-content .social .fab {
       margin-right: 1.5rem;
